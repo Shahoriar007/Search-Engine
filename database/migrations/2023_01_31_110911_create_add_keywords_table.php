@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('add_businesses', function (Blueprint $table) {
+        Schema::create('add_keywords', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('link')->nullable();
-            $table->string('short_des')->nullable();
-            $table->string('link_of')->nullable();
+            $table->string('keyword')->nullable();
+            $table->string('price')->nullable();
+            $table->string('quality')->nullable();
+
+            $table->unsignedBigInteger('bus_id')->unsigned();
+            $table->foreign('bus_id')->references('id')->on('add_businesses')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_businesses');
+        Schema::dropIfExists('add_keywords');
     }
 };
