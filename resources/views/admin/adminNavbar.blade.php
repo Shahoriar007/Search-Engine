@@ -27,9 +27,16 @@
                                 </li> -->
                                 
                                 <li class="nk-menu-item">
-                                    <a href="" class="nk-menu-link">
+                                    <a href="{{ route('admin.dashboard') }}" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
                                         <span class="nk-menu-text">Dashboard</span>
+                                    </a>
+                                </li><!-- .nk-menu-item -->
+
+                                <li class="nk-menu-item">
+                                    <a href="{{ route('newBusinessAdd') }}" class="nk-menu-link">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-building"></em></span>
+                                        <span class="nk-menu-text">Add New Business</span>
                                     </a>
                                 </li><!-- .nk-menu-item -->
                                 

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AddBusinessController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,5 +29,13 @@ require __DIR__.'/auth.php';
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
+
+// Admin view
+Route::prefix('admin')->group(function(){
+
+    // Admin Dashboard
+    Route::get('/newBusiness', [AddBusinessController::class, 'newBusinessAddView'])->middleware(['auth:admin', 'verified'])->name('newBusinessAdd');
+
+});
 
 require __DIR__.'/adminauth.php';

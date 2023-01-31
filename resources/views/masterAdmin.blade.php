@@ -31,7 +31,6 @@
 @include('admin.adminNavbar')
 
     @yield('adminDashboard')
-    
 
 @include('admin.adminFooter')
 
