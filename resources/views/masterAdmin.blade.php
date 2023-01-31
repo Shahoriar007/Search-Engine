@@ -31,6 +31,8 @@
 @include('admin.adminNavbar')
 
     @yield('adminDashboard')
+    @yield('newBusinessAdd')
+    @yield('allBusinessList')
 
 @include('admin.adminFooter')
 

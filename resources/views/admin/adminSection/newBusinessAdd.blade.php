@@ -1,5 +1,5 @@
 @extends('masterAdmin')
-@section('adminDashboard')
+@section('newBusinessAdd')
 
 <!-- content @s -->
 <div class="nk-content ">
