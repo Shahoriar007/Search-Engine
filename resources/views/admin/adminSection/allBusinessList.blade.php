@@ -75,7 +75,7 @@ div.dataTables_wrapper div.dataTables_length select {
                 <td><a href="{{ $item->link }}">{{ $item->link }}</a></td>
 
                 <td>
-                    <a href="" id="deactive">
+                    <a href="{{ route('businessDetails',$item->id) }}" >
                         <button type="button" class="btn btn-primary">Details</button>
                     </a>
                 </td>

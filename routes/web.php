@@ -36,6 +36,9 @@ Route::prefix('admin')->group(function(){
     // All business List
     Route::get('/allBusinessList', [AddBusinessController::class, 'allBusinessListView'])->middleware(['auth:admin', 'verified'])->name('allBusinessList');
 
+    // business details
+    Route::get('/businessDetails/{id}', [AddBusinessController::class, 'businessDetailsView'])->middleware(['auth:admin', 'verified'])->name('businessDetails');
+
     // Admin add new business
     Route::get('/newBusiness', [AddBusinessController::class, 'newBusinessAddView'])->middleware(['auth:admin', 'verified'])->name('newBusinessAdd');
 

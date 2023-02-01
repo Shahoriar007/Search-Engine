@@ -21,5 +21,12 @@ class AddBusinessController extends Controller
         return view('admin.adminSection.allBusinessList', compact('business'));
     }
 
+    // View all business list
+    public function businessDetailsView($id)
+    {
+        
+        return view('admin.adminSection.businessDetails');
+    }
+
     
 }

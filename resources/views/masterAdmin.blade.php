@@ -33,6 +33,7 @@
     @yield('adminDashboard')
     @yield('newBusinessAdd')
     @yield('allBusinessList')
+    @yield('businessDetails')
 
 @include('admin.adminFooter')
 
