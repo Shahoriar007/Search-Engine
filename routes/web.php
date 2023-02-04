@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AddBusinessController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Search page view
+Route::get('/search', [SearchController::class, 'searchView'])->name('searchView');
+// search page search 
+Route::post('/search', [SearchController::class, 'searchBar'])->name('search');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,6 +35,8 @@ require __DIR__.'/auth.php';
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
+
+
 
 // Admin view
 Route::prefix('admin')->group(function(){
